@@ -17,5 +17,7 @@ public class BukuMain12 {
         Buku12 bk2 = new Buku12("Self Reward", "Maheera Ayesha", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku12 Buku = new Buku12("Black Box", "Hayati Akhiri", 390, 46, 245000);
     }
 }
