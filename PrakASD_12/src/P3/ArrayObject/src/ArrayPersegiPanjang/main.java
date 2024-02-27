@@ -1,4 +1,4 @@
-package P3.ArrayObject.src;
+package P3.ArrayObject.src.ArrayPersegiPanjang;
 
 import java.util.Scanner;
 

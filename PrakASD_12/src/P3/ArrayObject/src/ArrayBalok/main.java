@@ -1,4 +1,4 @@
-package P3.ArrayBalok;
+package P3.ArrayObject.src.ArrayBalok;
 
 public class main {
     public static void main(String[] args) {
