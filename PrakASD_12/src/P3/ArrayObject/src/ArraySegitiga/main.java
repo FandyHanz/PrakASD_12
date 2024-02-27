@@ -15,5 +15,11 @@ public class main {
             sgArray[i].alas = input12.nextInt();
 
         }
+
+        for (int i = 0; i < 4; i++) {
+            System.out.println("segitiga ke " + i + ": ");
+            System.out.println("Luas: " + sgArray[i].hitungLuas());
+            System.out.println("Keliling: " + sgArray[i].hitungKeliling());
+        }
     }
 }

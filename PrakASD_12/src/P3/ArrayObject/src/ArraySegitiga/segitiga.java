@@ -12,7 +12,7 @@ public class segitiga {
 
     int hitungLuas() {
         
-       return (1 / 2 * alas * tinggi);
+       return (int)(0.5 * alas * tinggi);
     }
 
     int hitungKeliling(){
