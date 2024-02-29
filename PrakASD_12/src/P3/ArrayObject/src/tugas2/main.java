@@ -21,6 +21,7 @@ public class main {
             pdm[i].jenisKelamin = Strinput12.nextLine();
             System.out.print("Masukan ipk: ");
             pdm[i].ipk = Intinput12.nextDouble();
+            System.out.println();
         }
 
         for (int i = 0; i < 3; i++) {
