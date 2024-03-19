@@ -3,26 +3,27 @@ package P5.BruteForceDivideConquer.src.Percobaan1;
 public class Faktorial {
     public int nilai;
 
-    public Faktorial(){
-        
+    public Faktorial() {
+
     }
 
-    int faktorialBF(int n){
+    int faktorialBF(int n) {
         int fakto = 1;
-        for (int i = 1; i <= n; i++) {
+        int i = 1;
+        while (n >= i) {
             fakto = fakto * i;
+            i = i + 1;
         }
         return fakto;
     }
 
-    int faktorialDC(int n){
-        if (n == 1){
+    int faktorialDC(int n) {
+        if (n == 1) {
             return 1;
-        }
-        else{
+        } else {
             int fakto = n * faktorialDC(n - 1);
             return fakto;
         }
     }
-    
+
 }
