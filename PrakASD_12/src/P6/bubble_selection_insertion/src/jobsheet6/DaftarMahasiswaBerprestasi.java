@@ -31,4 +31,18 @@ public class DaftarMahasiswaBerprestasi {
             }
         }
     }
+
+    void Selectionsort(){
+        for (int i = 0; i < listMhs.length -1; i++) {
+            int idxmin = 1;
+            for (int j = i + 1; j < listMhs.length; j++) {
+                if (listMhs[j].ipk < listMhs[idxmin].ipk) {
+                    idxmin = j;
+                }
+            }
+            Mahasiswa tmp = listMhs[idxmin];
+            listMhs[idxmin] = listMhs[i];
+            listMhs[i] = tmp;
+        }
+    }
 }
