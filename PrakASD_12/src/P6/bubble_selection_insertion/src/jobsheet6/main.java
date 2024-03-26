@@ -27,7 +27,7 @@ public class main {
         list.Selectionsort();
         list.Tampil();
 
-        System.out.println("Data Mahasiswa setelah sorting asc berdasarkan ipk: ");
+        System.out.println("Data Mahasiswa setelah sorting desc berdasarkan ipk: ");
         list.Insertionsort();
         list.Tampil();
     }
