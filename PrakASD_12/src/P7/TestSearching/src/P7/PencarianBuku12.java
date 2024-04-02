@@ -42,4 +42,23 @@ public class PencarianBuku12 {
             System.out.println("Data " + x + " tidak ditemukan");
         }
     }
+
+    Buku12 Findbuku(String cari1){
+        int posisi = 0;
+        for (int i = 0; i < listBuku.length; i++) {
+            if (listBuku[i].judullBuku.equals(cari1)){
+                posisi = i;
+                break;
+            }
+        }
+        System.out.println("=========================");
+        System.out.println("Kode Buku: " + posisi);
+        System.out.println("Judul: " + listBuku[posisi].judullBuku);
+        System.out.println("Tahun terbit: " + listBuku[posisi].tahunTerbit);
+        System.out.println("Pengarang: " + listBuku[posisi].pengarang);
+        System.out.println("Stock: " + listBuku[posisi].stock);
+
+        return listBuku[posisi];
+    }
+
 }

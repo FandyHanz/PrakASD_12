@@ -33,10 +33,14 @@ public class Bukumain12 {
         System.out.println("===============================================");
         System.out.println("Pencarian data: ");
         System.out.println("====================================================");
-        System.out.print("Masukan kode buku yang dicari: ");
-        int kode1 = sc12int.nextInt();
-        System.out.println("Pencarian secara sequential: ");
-        int pos = data.FindSeqSearch(kode1);
-        data.Tampilposisi(kode1, pos);
+        System.out.println("masukan nama buku: ");
+        String cari1 = sc12Str.nextLine();
+        Buku12 datalist = data.Findbuku(cari1);
+        datalist.TampilBuku();
+        // System.out.print("Masukan kode buku yang dicari: ");
+        // int kode1 = sc12int.nextInt();
+        // System.out.println("Pencarian secara sequential: ");
+        // int pos = data.FindSeqSearch(kode1);
+        // data.Tampilposisi(kode1, pos);
     }
 }
