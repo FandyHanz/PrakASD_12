@@ -1,4 +1,5 @@
 package P7;
+
 import java.util.Scanner;
 
 public class Bukumain12 {
@@ -33,14 +34,17 @@ public class Bukumain12 {
         System.out.println("===============================================");
         System.out.println("Pencarian data: ");
         System.out.println("====================================================");
-        System.out.println("masukan nama buku: ");
-        String cari1 = sc12Str.nextLine();
-        Buku12 datalist = data.Findbuku(cari1);
-        datalist.TampilBuku();
-        // System.out.print("Masukan kode buku yang dicari: ");
-        // int kode1 = sc12int.nextInt();
-        // System.out.println("Pencarian secara sequential: ");
-        // int pos = data.FindSeqSearch(kode1);
-        // data.Tampilposisi(kode1, pos);
+        System.out.print("masukan kode buku: ");
+        int cari1 = sc12Str.nextInt();
+        System.out.println("============================================");
+        System.out.println("pencarian Squential");
+        System.out.println("===============================================");
+        int pos = data.FindSeqSearch(cari1);
+        data.Tampilposisi(cari1, pos);
+        System.out.println("================================================");
+        System.out.println("pencarian secara binary");
+        System.out.println("=======================================================");
+        int posisi = data.FindBinarySearch(cari1, 0, jumlahBuku -1);
+        data.Tampilposisi(cari1, posisi);
     }
 }
