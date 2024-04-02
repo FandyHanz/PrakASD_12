@@ -8,7 +8,7 @@ public class Bukumain12 {
         Scanner sc12int = new Scanner(System.in);
 
         PencarianBuku12 data = new PencarianBuku12();
-        int jumlahBuku = 5;
+        int jumlahBuku = 6;
 
         System.out.println("===================================");
         System.out.println("Masukan secara urut, dari kode buku terkecil");

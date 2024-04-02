@@ -1,8 +1,8 @@
 package P7;
 
 public class PencarianBuku12 {
-    Buku12[] listBuku = new Buku12[5];
-    int idx;
+    Buku12[] listBuku = new Buku12[6];
+    int idx = 0;
 
     void TambahBuku(Buku12 m) {
         if (idx < listBuku.length) {
@@ -33,7 +33,7 @@ public class PencarianBuku12 {
     void Tampilposisi(int x, int pos) {
         if (pos != -1) {
             System.out.println("=========================");
-            System.out.println("Kode Buku: " + (pos + 1));
+            System.out.println("Kode Buku: " + listBuku[pos].kodeBuku);
             System.out.println("Judul: " + listBuku[pos].judullBuku);
             System.out.println("Tahun terbit: " + listBuku[pos].tahunTerbit);
             System.out.println("Pengarang: " + listBuku[pos].pengarang);
@@ -67,9 +67,9 @@ public class PencarianBuku12 {
         if (cari == listBuku[mid].kodeBuku) {
             return (mid);
         } else if (cari < listBuku[mid].kodeBuku) {
-            return FindBinarySearch(cari, left, mid -1);
-        } else if (cari > listBuku[mid].kodeBuku) {
             return FindBinarySearch(cari, mid +1, right);
+        } else if (cari > listBuku[mid].kodeBuku) {
+            return FindBinarySearch(cari, left, mid -1);
         } else {
             return -1;
         }
