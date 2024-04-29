@@ -39,6 +39,9 @@ public class utama12 {
                 case 3:
                     gd12.tampilkanBarang();
                     break;
+                case 4:
+                    gd12.tampilBarangteratas();
+                    break;
                 case 5:
                     iscont = false;
                     break;

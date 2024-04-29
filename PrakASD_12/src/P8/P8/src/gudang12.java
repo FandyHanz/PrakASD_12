@@ -61,4 +61,11 @@ public class gudang12 {
         }
     }
 
+    void tampilBarangteratas() {
+        if (!cekKosong()) {
+            System.out.println("barang teratas adalah: ");
+            System.out.printf("kode %d: %s (kategori %s) \n", tumpukan[top].kode, tumpukan[top].nama,
+            tumpukan[top].kategori);
+        }
+    }
 }
