@@ -5,11 +5,26 @@ public class gudang12 {
     public int size;
     public int top;
 
+
     public gudang12(int kapasitas) {
         size = kapasitas;
         tumpukan = new barang12[size];
         top = -1;
     }
+
+String konversiDesimalkeBiner (int kode){
+    Stackkonversi stk = new Stackkonversi();
+    while (kode != 0){
+        int sisa = kode % 2;
+        stk.push(sisa);
+        kode = kode / 2;
+    }
+    String biner = new String();
+    while (!stk.isEmpty()){
+        biner += stk.pop();
+    }
+    return biner;
+}
 
     boolean cekKosong() {
         if (top == -1) {
@@ -42,6 +57,7 @@ public class gudang12 {
             barang12 delete = tumpukan[top];
             top--;
             System.out.println("Barang " + delete.nama + " telah berhasil diambil dari gudang");
+            System.out.println("kode unik dalm biner " + konversiDesimalkeBiner(delete.kode));
             return delete;
         } else {
             System.out.println("tumpukan barang kosong");
