@@ -62,6 +62,7 @@ public class queue {
     void enqueque(int dt) {
         if (isFull()) {
             System.out.println("data sudah penuh");
+            System.exit(0);
         } else {
             if (isEmpty()) {
                 front = rear = 0;
