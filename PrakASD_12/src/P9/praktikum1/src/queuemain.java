@@ -14,7 +14,7 @@ public class queuemain {
     }
 
     public static void main(String[] args) {
-        Scanner sc12 = new Scanner (System.in);
+        Scanner sc12 = new Scanner(System.in);
         boolean iscont = true;
         System.out.print("masukan kapasistas data: ");
         int n = sc12.nextInt();
@@ -25,19 +25,20 @@ public class queuemain {
             int pilih = sc12.nextInt();
             switch (pilih) {
                 case 1:
-                if (!q.isFull()){
-                    System.out.println("masukan data: ");
-                    int dataMasuk = sc12.nextInt();
-                    q.enqueque(dataMasuk);
-                } else {
-                    System.out.println("data sudah penuh");
-                    iscont = false;
-                    break;
-                }     
+                    if (!q.isFull()) {
+                        System.out.println("masukan data: ");
+                        int dataMasuk = sc12.nextInt();
+                        q.enqueque(dataMasuk);
+                    } else {
+                        System.out.println("data sudah penuh");
+                        iscont = false;
+                        break;
+                    }
                     break;
                 case 2:
-                    q.dequeque();
-                    if (q.isEmpty() || iscont) {
+                    if (!q.isEmpty()) {
+                        q.dequeque();
+                    } else {
                         System.out.println("data sudah kosong");
                         iscont = false;
                         break;
@@ -48,7 +49,7 @@ public class queuemain {
                     break;
                 case 4:
                     q.peek();
-                     break;
+                    break;
                 case 5:
                     q.clear();
                     break;
