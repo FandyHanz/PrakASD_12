@@ -36,6 +36,15 @@ public class queue {
         }
     }
 
+    void peekRear(){
+        if (!isEmpty()) {
+            System.out.println("data paling belakang adalah: " + data[rear].norek + " " + data[rear].nama + " "
+                    + data[rear].umur + " " + data[rear].alamat + " " + data[rear].saldo);
+        } else {
+            System.out.println("data kosong");
+        }
+    }
+
     void print() {
         if (isEmpty()) {
             System.out.println("data masih kosong ");
