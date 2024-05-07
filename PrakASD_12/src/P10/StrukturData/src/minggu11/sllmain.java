@@ -14,5 +14,15 @@ public class sllmain {
         sgl.print();
         sgl.insertAt(3, 833);
         sgl.print();
+        System.out.println("Data pada indeks ke 1: " + sgl.getData(1));
+        System.out.println("Data 3 terletak pada indeks ke: " + sgl.indexOf(760));
+        sgl.remove(999);
+        sgl.print();
+        sgl.removeAt(0);
+        sgl.print();
+        sgl.removeFirst();
+        sgl.print();
+        sgl.removeLast();
+        sgl.print();
     }
 }
