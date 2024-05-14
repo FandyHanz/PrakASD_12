@@ -1,22 +1,27 @@
 package P11.doublelinkedlist.src;
 
 public class doublelinkedlistmain {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         doublelinkedlist dll = new doublelinkedlist();
         dll.print();
-       System.out.println("size: " + dll.size);
+        System.out.println("size: " + dll.size);
         System.out.println("=============================");
-        dll.addFirst(3);
-        dll.addLast(4);
-        dll.addFirst(7);
+        dll.addLast(50);
+        dll.addLast(40);
+        dll.addLast(10);
+        dll.addLast(20);
         dll.print();
         System.out.println("size: " + dll.size);
         System.out.println("=============================");
-        dll.add(40, 1);
+        dll.removeFirst();
         dll.print();
         System.out.println("size: " + dll.size);
         System.out.println("=============================");
-        dll.clear();
+        dll.removeLast();
+        dll.print();
+        System.out.println("size: " + dll.size);
+        System.out.println("=============================");
+        dll.remove(1);
         dll.print();
         System.out.println("size: " + dll.size);
         System.out.println("=============================");
