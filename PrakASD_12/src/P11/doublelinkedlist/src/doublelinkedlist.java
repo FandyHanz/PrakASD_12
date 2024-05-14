@@ -142,4 +142,34 @@ public class doublelinkedlist {
             size--;
         }
     }
+
+    int getFirst() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Data kosong tidak ada isinya");
+        }
+        node tmp = head;
+        return tmp.data;
+    }
+
+    int getLast() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Data kosong tidak ada isinya");
+        }
+        node tmp = head;
+        while (tmp.next != null) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
+
+    int get(int index) throws Exception {
+        if (isEmpty() || index >= size) {
+            throw new Exception("index di luar value");
+        }
+        node tmp = head;
+        for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
 }
