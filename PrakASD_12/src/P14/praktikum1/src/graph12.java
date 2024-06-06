@@ -52,7 +52,7 @@ public class graph12 {
         for (int i = 0; i < vertex; i++) {
             if (list[i].size() > 0){
                 System.out.println("Gedung " + (char) ('A' + i ) + " terhubung dengan ");
-                for (int j = 0; j < list[i].size; j++) {
+                for (int j = 0; j < list[i].size(); j++) {
                     System.out.print((char) ('A' + list[i].get(j)) + " (" + list[i].getJarak(j) +"m), ");
                 }
                 System.out.println("");
@@ -60,4 +60,22 @@ public class graph12 {
         }
         System.out.println();
     }
-}
+    void cekTetangga(int asal, int tujuan) throws Exception{
+        boolean isFound = false;
+        for (int i = 0; i < list[asal].size(); i++) {
+                if (list[asal].get(i) == tujuan){
+                    isFound = true;
+                    break;
+                }
+            }
+
+            char asalc = (char) ('A' + asal);
+            char tujuc = (char) ('A'+ tujuan);
+            if (isFound){
+                System.out.println("Gedung " + asalc + " dan gedung " + tujuc + " bertetangga");
+            } else {
+                System.out.println("Gedung " + asalc + " dan gedung " + tujuc + " tidak bertetangga");
+            }
+        }
+    }
+
