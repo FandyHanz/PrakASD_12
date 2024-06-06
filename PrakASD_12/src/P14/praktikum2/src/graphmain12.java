@@ -13,5 +13,6 @@ public class graphmain12 {
         System.out.println("Hasil setelah penghapusan edge: ");
         grph.removeEdge(2, 1);
         grph.printGraph();
+        grph.degree(3);
     }
 }
